@@ -1,23 +1,24 @@
-// var x = {Value: 0};
+var x = {
+    Value: 0
+};
 
-// function a(obj)
-// {
-//     obj.Value++;
-// }
+function a(obj) {
+    obj.Value++;
+}
 
-// a(x);
-// console.log(x.Value);
+a(x);
+console.log(x.Value);
 
-// f=function(){
+f = function () {
 
-//     (()=>{
-//         var a='a'
-//         let b='b'
-//     })()
+    (() => {
+        var a = 'a'
+        let b = 'b'
+    })()
 
-//     console.log(a,b)
-// }
-// f()
+    console.log(a, b)
+}
+f()
 
 // a=[2,3,15,6]
 // console.log(a.sort((a,b)=>{
