@@ -93,14 +93,32 @@ class LinkedList {
         this.head = first;
         return this.prinList();
     }
+    reverse2() {
+        let first = this.head;
+        this.tail = this.head;
+        let current = this.head.next;
+        // let holder = null;
+        while (current) {
+            let holder = current.next;
+            current.next = first;
+            first = current;
+            current = holder;
+        }
+        this.head.next = null;
+        this.head = first;
+    }
 }
 const myLinkedList = new LinkedList(10);
 myLinkedList.append(5)
 myLinkedList.append(16)
 myLinkedList.prepend(20)
 myLinkedList.insert(2, 40)
+
 // console.log(myLinkedList)
 console.log(myLinkedList.prinList())
-myLinkedList.reverse()
+myLinkedList.traverseIndex(2)
+console.log(myLinkedList.prinList())
+
+myLinkedList.reverse2()
 console.log(myLinkedList.prinList())
 // console.log(myLinkedList)
